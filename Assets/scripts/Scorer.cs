@@ -7,9 +7,11 @@ public class Scorer : MonoBehaviour
     private int score =0;
    private void OnCollisionEnter(Collision other) 
     {
-        Debug.Log("collision!");
-        this.score++;
-        Debug.Log("Player has hit "+ score + " Things!");
-        //GetComponent<MeshRenderer>().material.color = Color.yellow;
+        if(other.gameObject.tag != "Hit")
+        {
+            this.score++;
+            Debug.Log("Player has hit "+ score + " Things!");
+            //GetComponent<MeshRenderer>().material.color = Color.yellow;
+        }
     }
 }
