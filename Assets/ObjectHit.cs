@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ObjectHit : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other) {
+    private void OnCollisionEnter(Collision other) 
+    {
         Debug.Log("collision!");
-        Debug.Log(other);
+        GetComponent<MeshRenderer>().material.color = Color.yellow;
     }
 }
