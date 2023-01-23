@@ -17,6 +17,15 @@ public class Dropper : MonoBehaviour
         rb.useGravity = false;
     }
 
+
+    private void OnCollisionEnter(Collision other) 
+    {
+        if(other.gameObject.tag =="Ground")
+        {
+            GetComponent<Rigidbody>().isKinematic = true;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

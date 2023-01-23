@@ -11,9 +11,6 @@ public class ObjectHit : MonoBehaviour
             GetComponent<MeshRenderer>().material.color = Color.yellow;
             gameObject.tag = "Hit";
         }
-        if(other.gameObject.tag =="Ground")
-        {
-            GetComponent<Rigidbody>().isKinematic = true;
-        }
+    
     }
 }
